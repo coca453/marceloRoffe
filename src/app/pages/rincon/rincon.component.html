@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <div class="row section">
+    <div class="col-12 section-title">
+      <i class="fa fa-pencil-square-o mr-3"></i>Rincon Literario</div>
+  </div>
+  <div class="card mt-4">
+      <div class="card-body p-4">
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-light" *ngFor="let rincon of rincones">
+            <i class="fa fa-external-link mr-3"></i>
+            <a href="assets/rincon/{{rincon.url}}" target="blank" class="r-rincon">
+              <span [innerHtml]=rincon.titulo></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</div>

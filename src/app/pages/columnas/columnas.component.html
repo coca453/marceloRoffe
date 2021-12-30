@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <div class="row section">
+    <div class="col-12 section-title"><i class="fa fa-columns mr-3"></i>Columna Mensual</div>
+  </div>
+  <div class="card mt-4">
+    <div class="card-body p-4">
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-light" *ngFor="let columna of columnas">
+          <i class="fa fa-external-link mr-3"></i>
+          <a href="{{columna.url}}" target="blank" class="c-columna">
+            <span [innerHtml]=columna.titulo></span>
+          </a>
+        </li>
+      </ul>
+      <div class="mt-4">
+        <pagination [totalItems]="total" [itemsPerPage]="maxResults" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)" previousText="Anterior" nextText="Siguiente"></pagination>
+      </div>
+    </div>
+  </div>
+</div>

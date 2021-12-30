@@ -1,0 +1,132 @@
+<div class="container-fluid">
+  <div class="row section">
+    <div class="col-12 section-title">
+      <i class="fa fa-camera mr-3"></i>Fotogalería</div>
+  </div>    
+  <div class="mt-4" id="accordion" role="tablist">
+    <div class="card">
+      <a data-toggle="collapse" href="#fotos" aria-expanded="true" aria-controls="fotos" (click)="panelFotos = !panelFotos; panelCongresos = false; panelEstadios = false; panelSeminarioCordoba = false;">
+        <div class="card-header" role="tab" id="panel_fotos" style="cursor: pointer;">                
+          <i class="fa mr-3" [ngClass]="{'fa-caret-down' : panelFotos, 'fa-caret-right' : !panelFotos}"></i>Fotos
+        </div>
+      </a>
+      <div id="fotos" class="collapse show" role="tabpanel" aria-labelledby="panel_fotos" data-parent="#accordion">
+        <div class="card-body">
+          <div class="form-row">
+            <div class="col-sm-2" *ngFor="let foto of fotos">
+              <div class="card mt-2">
+                <div class="card-body p-2">
+                  <a data-toggle="modal" data-target="#popup" (click)="fotoSeleccionada = foto;" style="cursor: pointer">
+                    <img class="mx-auto d-block img-fluid" src="assets/fotogaleria/fotos/{{foto.id}}ch.jpg" alt="{{foto.titulo}}" title="{{foto.titulo}}">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 mt-4">
+              <pagination [totalItems]="totalFotos" [maxSize]="5" [itemsPerPage]="maxResults" [(ngModel)]="currentPageFotos" (pageChanged)="pageChangedFotos($event)" previousText="Anterior" nextText="Siguiente"></pagination>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <a class="collapsed" data-toggle="collapse" href="#fotosCongresos" aria-expanded="false" aria-controls="fotosCongresos" (click)="panelCongresos = !panelCongresos; panelFotos = false; panelEstadios = false; panelSeminarioCordoba = false;">
+        <div class="card-header" role="tab" id="panel_congresos" style="cursor: pointer;">                
+          <i class="fa mr-3" [ngClass]="{'fa-caret-down' : panelCongresos, 'fa-caret-right' : !panelCongresos}"></i>Participaciones en Congresos
+        </div>
+      </a>
+      <div id="fotosCongresos" class="collapse" role="tabpanel" aria-labelledby="panel_congresos" data-parent="#accordion">
+        <div class="card-body">
+          <div class="form-row">
+            <div class="col-sm-2" *ngFor="let congreso of congresos">
+              <div class="card mt-2">
+                <div class="card-body p-2">
+                  <a data-toggle="modal" data-target="#popup" (click)="fotoSeleccionada = congreso;" style="cursor: pointer">
+                    <img class="mx-auto d-block img-fluid" src="assets/fotogaleria/congresos/{{congreso.id}}ch.jpg" alt="{{congreso.titulo}}" title="{{congreso.titulo}}">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 mt-4">
+              <pagination [totalItems]="totalCongresos" [maxSize]="5" [itemsPerPage]="maxResults" [(ngModel)]="currentPageCongresos" (pageChanged)="pageChangedCongresos($event)" previousText="Anterior" nextText="Siguiente"></pagination>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <a class="collapsed" data-toggle="collapse" href="#fotosEstadios" aria-expanded="false" aria-controls="fotosEstadios" (click)="panelEstadios = !panelEstadios; panelCongresos = false; panelFotos = false; panelSeminarioCordoba = false;">
+        <div class="card-header" role="tab" id="panel_estadios" style="cursor: pointer;">                
+          <i class="fa mr-3" [ngClass]="{'fa-caret-down' : panelEstadios, 'fa-caret-right' : !panelEstadios}"></i>En los distintos Estadios del mundo
+        </div>
+      </a>
+      <div id="fotosEstadios" class="collapse" role="tabpanel" aria-labelledby="panel_estadios" data-parent="#accordion">
+        <div class="card-body">
+          <div class="form-row">
+            <div class="col-sm-2" *ngFor="let estadio of estadios">
+              <div class="card mt-2">
+                <div class="card-body p-2">
+                  <a data-toggle="modal" data-target="#popup" (click)="fotoSeleccionada = estadio;" style="cursor: pointer">
+                    <img class="mx-auto d-block img-fluid" src="assets/fotogaleria/estadios/{{estadio.id}}ch.jpg" alt="{{estadio.titulo}}" title="{{estadio.titulo}}">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 mt-4">
+              <pagination [totalItems]="totalEstadios" [maxSize]="5" [itemsPerPage]="maxResults" [(ngModel)]="currentPageEstadios" (pageChanged)="pageChangedEstadios($event)" previousText="Anterior" nextText="Siguiente"></pagination>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <a class="collapsed" data-toggle="collapse" href="#fotosSeminarioCordoba" aria-expanded="false" aria-controls="fotosSeminarioCordoba" (click)="panelSeminarioCordoba = !panelSeminarioCordoba; panelCongresos = false; panelFotos = false; panelEstadios = false;">
+        <div class="card-header" role="tab" id="panel_seminarioCordoba" style="cursor: pointer;">                
+          <i class="fa mr-3" [ngClass]="{'fa-caret-down' : panelSeminarioCordoba, 'fa-caret-right' : !panelSeminarioCordoba}"></i>Seminario de Formación - Fortaleza Mental en el Alto Rendimiento
+        </div>
+      </a>
+      <div id="fotosSeminarioCordoba" class="collapse" role="tabpanel" aria-labelledby="panel_seminarioCordoba" data-parent="#accordion">
+        <div class="card-body">
+          <div class="form-row">
+            <div class="col-sm-2" *ngFor="let seminario of seminarioCordoba">
+              <div class="card mt-2">
+                <div class="card-body p-2">
+                  <a data-toggle="modal" data-target="#popup" (click)="fotoSeleccionada = seminario;" style="cursor: pointer">
+                    <img class="mx-auto d-block img-fluid" src="assets/fotogaleria/seminario_cordoba/{{seminario.id}}ch.jpg" alt="{{seminario.titulo}}" title="{{seminario.titulo}}">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 mt-4">
+              <pagination [totalItems]="totalSeminarioCordoba" [maxSize]="5" [itemsPerPage]="maxResults" [(ngModel)]="currentPageSeminarioCordoba" (pageChanged)="pageChangedSeminarioCordoba($event)" previousText="Anterior" nextText="Siguiente"></pagination>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" *ngIf="fotoSeleccionada" id="popup" tabindex="-1" role="dialog" aria-labelledby="popupLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-title">{{fotoSeleccionada.titulo}}</span>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img class="img-thumbnail mx-auto d-block img-fluid" src="assets/fotogaleria/{{fotoSeleccionada.tipo}}/{{fotoSeleccionada.id}}gr.jpg" alt="{{fotoSeleccionada.titulo}}">
+      </div>
+    </div>
+  </div>
+</div>

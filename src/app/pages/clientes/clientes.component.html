@@ -1,0 +1,10 @@
+<div class="container-fluid">
+  <div class="row section">
+    <div class="col-12 section-title"><i class="fa fa-briefcase mr-3"></i>Clientes</div>
+  </div>
+  <div class="form-row card-group">
+    <div class="col-md-3" *ngFor="let cliente of clientes">
+      <mr-cliente [clienteData]=cliente></mr-cliente>
+    </div>
+  </div>
+</div>

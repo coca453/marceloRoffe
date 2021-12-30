@@ -1,0 +1,11 @@
+.frase {
+    font-size: 14px;
+    font-style: italic;
+    margin: 5px 5px 5px 0;
+}
+
+.autor {
+    font-size: 13px;
+    font-style: italic;
+    margin-right: 5px;
+}

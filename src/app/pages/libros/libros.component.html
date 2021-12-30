@@ -1,0 +1,10 @@
+<div class="container-fluid">
+  <div class="row section">
+    <div class="col-12 section-title"><i class="fa fa-book mr-3"></i>Libros</div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-6" *ngFor="let libro of libros">
+      <mr-libro [libroData]=libro></mr-libro>
+    </div>
+  </div>
+</div>

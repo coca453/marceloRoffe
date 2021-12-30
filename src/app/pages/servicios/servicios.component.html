@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <div class="row section">
+    <div class="col-12 section-title"><i class="fa fa-cogs mr-3"></i>Servicios</div>
+  </div>
+  <div class="card mt-4">
+    <div class="card-body">
+      Somos un equipo de profesionales especializados en Alto Rendimiento en el deporte, con un modelo aplicable a las necesidades
+      de rendimiento de la Empresa. Contamos con trayectoria en seleccionados nacionales. Los temas específicos que nuestro
+      equipo trabaja son los siguientes:
+    </div>
+  </div>
+  <accordion class="mt-4">
+    <accordion-group *ngFor="let servicio of servicios; first as f" [isDisabled]="isDisabled(servicio.disabled)" [isOpen]="f" #group>
+      <div accordion-heading style="cursor: pointer;">            
+        <i class="fa mr-3" [ngClass]="{'fa-caret-down' : group.isOpen, 'fa-caret-right' : !group.isOpen}"></i>
+        <span class="s-titulo" [innerHtml]=servicio.servicio></span>
+      </div>
+      <div class="s-description" [innerHtml]=servicio.descripcion></div>
+    </accordion-group>
+  </accordion>
+</div>

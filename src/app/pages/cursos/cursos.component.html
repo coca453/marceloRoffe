@@ -1,0 +1,14 @@
+<div class="container-fluid">
+  <div class="row section">
+    <div class="col-12 section-title">
+      <i class="fa fa-graduation-cap mr-3"></i>Cursos - Online</div>
+  </div>
+  <ul class="list-group mt-4">
+    <li class="list-group-item list-group-item-light" *ngFor="let curso of cursos">
+      <i class="fa fa-external-link mr-3"></i>
+      <a href="{{curso.url}}" target="blank" class="c-curso">
+        <span [innerHtml]=curso.titulo></span>
+      </a>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,14 @@
+.card-body {
+    border-top: 1px solid #F0F0F0;    
+    background-color: #FAFAFA;
+}
+
+.card-img-top {
+    padding: 20px;
+}
+
+.card-text {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}

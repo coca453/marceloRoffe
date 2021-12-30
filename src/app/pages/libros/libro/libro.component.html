@@ -1,0 +1,36 @@
+<div class="card mt-4">
+  <div class="card-header">
+    <div class="l-title">{{libroData.nombre}}</div>
+  </div>
+  <div class="card-body">
+    <div class="media">
+      <img class="align-self-top mr-4" src="assets/img/libros/{{libroData.src}}" alt="{{libroData.nombre}}" title="{{libroData.nombre}}" height="135">
+      <div class="media-body">
+        <div class="l-text mb-2">
+          <b>Autores</b>: &#160;
+          <i>{{libroData.autores}}</i>
+        </div>
+        <div class="l-text mb-2">
+          <b>Publicacion</b>: &#160;
+          <i>{{libroData.publicacion}}</i>
+        </div>
+        <div class="l-text mb-4">
+          <b>ISBN</b>: &#160;
+          <i>{{libroData.isbn}}</i>
+        </div>
+        <div class="row l-text mb-2">
+          <div *ngIf="libroData.url" class="col-md-6">            
+            <a href="{{libroData.url}}" target="blank" class="btn btn-outline-secondary btn-block l-button mt-2 mr-2" role="button"><i class="fa fa-shopping-cart mr-3"></i>¡Haga click aquí para comprar!</a>
+          </div>
+          <div *ngIf="libroData.descripcion" class="col-md-6">
+            <button type="button" class="btn btn-outline-secondary btn-block l-button mt-2" data-toggle="collapse" [attr.data-target]="'#info_' + libroData.id"><i class="fa fa-info-circle mr-3"></i>Ver más sobre este libro ...</button>
+          </div>
+        </div>
+        <div class="collapse mt-4" [attr.id]="'info_' + libroData.id">
+          <div class="l-description" [innerHtml]=libroData.descripcion></div>
+          <div class="l-description mt-4" [innerHtml]=libroData.nota></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

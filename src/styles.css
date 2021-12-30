@@ -1,0 +1,68 @@
+/* General */
+
+html {
+    font-size: 12px;
+    font-family: RobotoCondensed-Light;
+    min-height: 100%;
+    position: relative;    
+}
+
+body {
+    font-size: 12px;
+    font-family: RobotoCondensed-Light;
+    background-color: #FAFAFA;
+    overflow-y: scroll;
+    margin: 0 0 70px 0;
+    padding: 0;
+}
+
+.section {
+    border-bottom: 1px solid #555555;
+    background-color: #949494;
+    background: radial-gradient(at top left, #666666, #AAAAAA);
+    margin-bottom: 5px;
+}
+
+.section-title {
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    padding: 9px 0 9px 27px;
+}
+
+.form-control.ng-touched.ng-invalid {
+    border: 1px solid #CF392B;
+}
+
+.form-control.ng-touched.ng-valid {
+    border: 1px solid #339933;
+}
+
+.btn {
+    white-space: normal !important;
+    word-wrap: break-word; 
+}
+
+a.active.focus, a.active:focus, a.focus, a:active.focus, a:active:focus, a:focus,
+button.active.focus, button.active:focus, button.focus, button:active.focus, button:active:focus, button:focus,
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+    outline: 0;
+    outline-color: transparent;
+    outline-width: 0;
+    outline-style: none;
+}
+
+/* Import Fonts */
+	
+@font-face {
+    font-family: 'RobotoCondensed-Light';
+    src: url('assets/fonts/RobotoCondensed-Light.eot');
+    src: url('assets/fonts/RobotoCondensed-Light.eot?#iefix') format('embedded-opentype'),
+         url('assets/fonts/RobotoCondensed-Light.woff') format('woff'),
+         url('assets/fonts/RobotoCondensed-Light.woff2') format('woff2'),
+         url('assets/fonts/RobotoCondensed-Light.ttf') format('truetype'),
+         url('assets/fonts/RobotoCondensed-Light.svg#RobotoCondensed-Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

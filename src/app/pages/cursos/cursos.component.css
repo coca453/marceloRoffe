@@ -1,0 +1,10 @@
+.c-curso {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.2px;
+    color: #333333;    
+}
+
+.c-curso:hover {
+    text-decoration: none;
+}

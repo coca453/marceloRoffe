@@ -1,0 +1,670 @@
+<div class="container-fluid">
+
+  <!-- Fundamentos / Slider -->
+
+  <div class="form-row">
+
+    <div class="col-md-3 mt-4">
+      <div class="card h-100">
+        <div class="card-body p-2">
+          <div id="carousel-home" class="carousel slide" data-ride="carousel" data-interval="3000">
+            <div class="carousel-inner">
+              <div class="carousel-item" *ngFor="let item of Arr(num).fill(1); index as i"
+                [ngClass]="{'active': i == 0 }">
+                <img src="assets/img/slider_home/{{i + 1 | number }}.jpg" alt="Imagenes Destacadas"
+                  style="display: block; width: 100%;">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carousel-home" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-home" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Siguiente</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- youtube miradas -->
+    <div class="col-md-6 mt-4">
+      <div class="card h-100">
+        <iframe class="youtube" src="https://www.youtube.com/embed/q9egG-BH3oM">
+        </iframe>
+      </div>
+
+    </div>
+    <div class="col-md-3 mt-4">
+      <div class="card h-100">
+        <div class="card-body p-2">
+          <div id="carousel-2018" class="carousel slide" data-ride="carousel" data-interval="3000">
+            <div class="carousel-inner">
+              <div class="carousel-item" *ngFor="let item of Arr_2018(num_2018).fill(1); index as i"
+                [ngClass]="{'active': i == 0 }">
+                <img src="assets/img/slider_2018/{{i + 1 | number }}.jpg" alt="Imagenes Destacadas 2018"
+                  style="display: block; width: 100%;">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carousel-2018" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-2018" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Siguiente</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contenido Principal -->
+
+  <div class="form-row">
+
+    <!-- Columna Izquierda -->
+
+    <div class="col-md-3 mt-4">
+
+      <!-- Columna Mensual -->
+
+      <div class="card">
+        <div class="card-header h-card-header h-card-header-primary">
+          <i class="fa fa-columns mr-3"></i>Columna Mensual
+        </div>
+        <div class="card-body">
+          <a href="{{columna.url}}" target="blank">
+            <i class="fa fa-external-link mr-3"></i>{{columna.titulo}}
+          </a>
+        </div>
+        <div class="card-footer h-text-bold">
+          <a routerLink="/columnas">
+            <i class="fa fa-caret-right mr-3"></i>Ver todas las Columnas Mensuales
+          </a>
+        </div>
+      </div>
+
+      <!-- 50.000 Libros -->
+
+      <a routerLink="/libros">
+        <div class="card mt-4">
+          <div class="card-header h-card-header h-card-header-secondary">
+            <i class="fa fa-book mr-3"></i>Más de 60.000 libros vendidos !
+          </div>
+          <div class="card-body p-3">
+            <div class="h-text-bold text-center mb-3">(en especial en Argentina, Japón, España y Colombia)</div>
+            <img class="img-fluid" src="assets/img/banners/libros4.jpg" alt="60.000 Libros vendidos"
+              title="¡Click aquí para comprar!" style="display: block; width: 100%;">
+          </div>
+        </div>
+      </a>
+
+      <!-- youtube conferencia -->
+      <div class="card mt-4">
+        <div class="card-header h-card-header h-card-header-primary">
+          <i class="fa fa-youtube-play mr-3"></i>Video Destacado
+        </div>
+        <div class="card-body">
+          <iframe width="100%" src="https://www.youtube.com/embed/ttiiQXS-HxE
+          " frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="card-footer">
+          Fragmento de conferencia: Persiguiendo la excelencia con resiliencia - Guadalajara, México 2018
+        </div>
+      </div>
+
+
+      <!-- Twitter -->
+
+      <div class="card mt-4">
+        <div class="card-header h-card-header h-card-header-tw">
+          <i class="fa fa-twitter mr-3"></i>Twitter
+        </div>
+        <div class="card-body pt-1">
+          <a class="twitter-timeline" data-height="500" data-chrome="nofooter"
+            href="https://twitter.com/MarceloRoffe?ref_src=twsrc%5Etfw">Tweets by MarceloRoffe</a>
+        </div>
+      </div>
+
+
+
+      <!-- El Gráfico -->
+
+      <a href="http://www.elgrafico.com.ar/2008/07/30/C-919-marcelo-roffe.php" target="blank">
+        <div class="card mt-4">
+          <div class="card-header h-card-header h-card-header-secondary">
+            <i class="fa fa-star mr-3"></i>Nota Destacada
+          </div>
+          <div class="card-body p-3">
+            <img class="img-fluid" src="assets/img/banners/el_especialista.jpg" alt="El especialista"
+              title="Click aquí para leer la nota" style="display: block; width: 100%;">
+          </div>
+        </div>
+      </a>
+
+      <!-- Video Destacado -->
+
+      <div class="card mt-4">
+        <div class="card-header h-card-header h-card-header-primary">
+          <i class="fa fa-youtube-play mr-3"></i>Video Destacado
+        </div>
+        <div class="card-body">
+          <iframe width="100%" src="https://www.youtube.com/embed/DEruDCIX5s8" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="card-footer">
+          Video Resumen SOLCPAD en el 14º Congreso Mundial de ISSP Sevilla 2017
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Columna Central -->
+
+    <div class="col-md-6 mt-4">
+      <div class="row">
+
+
+        <!-- Libros cuarentena -->
+
+        <!--div class="col-md-12 mt-3">
+              <div class="card">
+                <div class="card-header h-card-header h-card-header-fv">
+                  <i class="fa fa-book mr-3"></i>Libros gratuitos para descargar en la cuarentena
+                </div>
+                <div class="card-body h-bg-libros-cuarentena p-2">
+                  <div class="h-text-bold h-text-cuarentena mt-2 ml-2 mr-2">
+                    Producto de la cuarentena compartimos dos libros de manera gratuita, para que todos tengan acceso
+                  </div>
+
+                  <div class="mt-3 ml-2 mr-2">
+                    <ul>
+                      <a href="assets/libros/psicologia-jugador-futbol.pdf" target="_blank">
+                        <li class="h-text-bold h-text-cuarentena">CLICK AQUÍ para descargar "Psicología del Jugador de Fútbol, Con la Cabeza Hecha Pelota"</li>
+                      </a>
+                      <a href="assets/libros/entrenamiento-mental-futbol-moderno.pdf" target="_blank">
+                        <li class="h-text-bold h-text-cuarentena">CLICK AQUÍ para descargar "Entrenamiento Mental en el Fútbol Moderno"</li>
+                      </a>
+
+                    </ul>
+                  </div>
+                  <div class="h-text-bold h-text-bold-main text-center text-white mt-3 mb-3 ml-2 mr-2">
+                      #QuedateEnTuCasa
+                  </div>
+                </div>
+
+              </div>
+
+          </div-->
+
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-6">
+              <a href="assets/columnas/maradona-eterno.pdf" target="_blank">
+                <img src="assets/img/banners/maradona1.jpg" width="100%" alt="" style="margin-bottom: 20px;">
+              </a>
+            </div>
+            <div class="col-6">
+              <a href="assets/motivando/tupropiolibro.pdf" target="_blank">
+                <img src="assets/img/banners/librosMarcelo.jpg" width="100%" alt="" style="margin-bottom: 20px;">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 mt-2">
+          <a href="assets/archivos/home/messi-campeon.pdf" target="_blank">
+            <img src="assets/img/messi-campeon.jpeg" width="100%" alt="" style="margin-bottom: 20px;">
+          </a>
+        </div>
+        <!--º<div class="col-md-12 mt-2">
+          <a href="assets/archivos/home/caso-messi.pdf" target="_blank">
+            <img src="assets/img/caso-messi.jpg" width="100%" alt="" style="margin-bottom: 20px;">
+          </a>
+        </div>-->
+
+        <div class="col-md-12 mt-2">
+          <a href="assets/columnas/presentacion_libro_despues_del_retiro_que.pdf" target="_blank">
+            <img src="assets/img/libro_retiro.jpg" width="100%" alt="" style="margin-bottom: 20px;">
+          </a>
+        </div>
+
+        <!--div class="col-md-12">
+          <a href="assets/archivos/home/roffenigro.pdf" target="_blank">
+            <img src="assets/img/roffenigro.jpg" width="100%" alt="" style="margin-bottom: 20px;">
+          </a>
+        </div-->
+
+
+
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header h-card-header h-card-header-secondary">
+              <i class="fa fa-leanpub mr-3"></i>Fundamentos de una capacitación DIFERENTE
+            </div>
+            <div class="card-body h-text-intro p-0">
+              <div class="pt-2 pl-3 pr-3">
+                La esencia de nuestra propuesta es compartir experiencias y vivencias en el Alto Rendimiento que nos
+                permitan reflexionar sobre lo que nos sucede en las empresas para modificar y mejorar conductas.<br><br>
+                Trabajar en equipo, disfrutar de un óptimo clima de confort psicologico, poseer claridad de metas para
+                alimentar la motivación cotidiana, ser un buen lider, saber como esta el otro y comunicarse con él
+                fluidamente, superar obstáculos, parece ser, entre otras cosas, la clave de una optimización del
+                rendimiento.
+              </div>
+            </div>
+            <div class="card-footer h-card-footer text-center">
+              <a href="http://www.alto-rendimiento.com.ar" target="_blank">
+                <span class="text-logo mr-1">
+                  <i class="fa fa-sign-in fa-lg mr-3"></i>Ingresar a la
+                </span>
+                <span class="text-consultora mr-3">
+                  Consultora Alto Rendimiento
+                </span>
+                <img class="logo" src="assets/img/logo_ar.png" alt="Consultora Alto Rendimiento">
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Futbol y Violencia -->
+
+        <div class="col-md-12 mt-4">
+          <a href="http://marceloroffe.com/assets/libros/Futbol_y_Violencia_Roffe_Jozami.pdf" target="blank">
+            <div class="card">
+              <div class="card-header h-card-header h-card-header-fv">
+                <i class="fa fa-book mr-3"></i>Futbol y Violencia
+              </div>
+              <div class="card-body h-bg-futbol-violencia p-2">
+                <div class="h-text-bold h-text-violencia mt-2 ml-2 mr-2">
+                  Agradezco a Lugar Editorial y a mi socio José Jozami por poder publicar por primera vez uno de mis
+                  libros en forma gratuita para que toda la gente tenga acceso al mismo.
+                  El tema es un tema que nos compete en el país del mundo con más muertes alrededor de una cancha de
+                  fútbol 318 y donde la violencia no cesa!
+                </div>
+                <div class="h-text-bold h-text-violencia mt-3 ml-2 mr-2">
+                  Este libro fue compilado desde un modo interdisciplinar con aportes de otros autores de otras
+                  disciplinas de primer nivel y fue presentado en el Senado de la Nación en Junio 2010! Ojalá les guste
+                  y lo compartan.
+                </div>
+                <div class="h-text-bold h-text-violencia mt-3 ml-2 mr-2">
+                  Atentamente,
+                </div>
+                <div class="h-text-bold h-text-bold-main text-center text-white mt-3 mb-3 ml-2 mr-2">
+                  Marcelo Roffé
+                </div>
+              </div>
+              <div class="card-footer bg-dark text-center text-white h-text-bold-main p-3">
+                <i class="fa fa-arrow-down mr-4"></i> CLICK AQUI PARA DESCARGAR EL LIBRO <i
+                  class="fa fa-arrow-down ml-4"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!--Lanus campeon en juveniles-->
+
+        <div class="col-md-12 mt-4">
+          <a href="https://www.ole.com.ar/lanus/campeon-categorias-inferiores_0_NWliRX-E-.html" target="blank">
+            <div class="card h-noticia h-bg-lanus">
+              <br>
+              <br>
+              <div class="text-center h-text-bold-gr text-white mt-4 mb-3">
+                El secreto psicológico del semillero de Lanús
+              </div>
+              <div class="text-center h-text-bold-main text-white mt-2 mb-4 ml-2 mr-2">
+                El Grana, que consiguió cuatro títulos sobre seis en Inferiores, <br>
+                realizó una innovadora acción durante la semana previa a las finales
+              </div>
+              <div class="text-center h-text-bold text-white mb-3">
+                Click aquí para leer la nota
+              </div>
+              <br>
+              <br>
+            </div>
+          </a>
+        </div>
+
+        <!-- Liderazgo para Equipos -->
+
+        <div class="col-md-12 mt-4">
+          <a href="https://www.amazon.com/s/ref=dp_byline_sr_book_1?ie=UTF8&text=Marcelo+Roff%C3%A9&search-alias=books&field-author=Marcelo+Roff%C3%A9&sort=relevancerank"
+            target="blank">
+            <div class="card h-noticia h-bg-e-books">
+              <div class="text-center h-text-bold-gr text-white mt-3 mb-4">
+                LIDERAZGO PARA EQUIPOS
+              </div>
+              <div class="text-center h-text-bold text-white mb-2 ml-2 mr-2">
+                Ahora también disponible en:
+              </div>
+              <div class="text-center h-text-bold-main text-white">
+                iTunes, Amazon, Google Play, La Casa del Libro y Mr. Books
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Las notas de Borinsky -->
+
+        <div class="col-md-12 mt-4">
+          <a href="assets/medios/Las_notas_de_Borinsky_Entrevista_a_Marcelo_Roffe.pdf" target="blank">
+            <div class="card h-noticia h-bg-borinsky">
+              <div class="text-center h-text-bold-gr text-white mt-3 mb-3">
+                Las notas de Borinsky
+              </div>
+              <div class="text-center h-text-bold-main text-white mb-4 ml-2 mr-2">
+                De cada diez entrenadores, ocho son jefes y dos son líderes
+              </div>
+              <div class="text-center h-text-bold text-white">
+                Click aquí para leer la nota
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Gago - Boca Juniors
+
+        <div class="col-md-12 mt-4">
+          <a href="https://www.ole.com.ar/boca-juniors/boca-gago-lesion-tendon-opinion-marcelo-roffe_0_lor-ud5eN.html" target="blank">
+            <div class="card h-noticia h-bg-gago">
+              <div class="text-center h-text-bold-gr text-white mt-4 mb-3">
+                El caso psicológico de Gago
+              </div>
+              <div class="text-center h-text-bold-main text-white mt-2 mb-4 ml-2 mr-2">
+                  "Gago siempre fue fuerte de la cabeza..."
+              </div>
+              <div class="text-center h-text-bold text-white mb-3">
+                Click aquí para leer la nota
+              </div>
+            </div>
+          </a>
+        </div>
+-->
+        <!-- Presentacion - Liderazgo para Equipos -->
+
+        <div class="col-md-12 mt-4">
+          <a href="https://www.youtube.com/watch?v=jtB0npKJBhk" target="blank">
+            <div class="card h-noticia h-bg-liderazgo-para-equipos">
+              <div class="text-center h-text-bold-gr text-white mt-3 mb-3">
+                PRESENTACIÓN DEL LIBRO: LIDERAZGO PARA EQUIPOS
+              </div>
+              <div class="text-center h-text-bold-main text-white mb-4 ml-2 mr-2">
+                CORFERIAS - BOGOTÁ - 28 de Abril de 2018 - 6.00 PM - Salón A
+              </div>
+              <div class="text-center h-text-bold text-white">
+                ¡Click aquí para ver el video del evento!
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Seminario -->
+
+        <div class="col-md-12 mt-4">
+          <a routerLink="/fotogaleria">
+            <div class="card h-noticia h-bg-seminario">
+              <div class="text-center h-text-bold-gr text-white mt-3 mb-3">
+                Seminario de Formación
+              </div>
+              <div class="text-center h-text-bold-main text-white mb-4 ml-2 mr-2">
+                Fortaleza Mental en el Alto Rendimiento - Universidad Católica de Córdoba - 18/05/2018
+              </div>
+              <div class="text-center h-text-bold text-white">
+                Click aquí para ver la Fotogalería
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Roffe en Mexico -->
+
+        <div class="col-md-12 mt-4">
+          <a href="https://www.youtube.com/watch?v=O42_SlWvFWI&list=PLGrdGNZO2aNS6KuOa31Ja6OhkFYDJIHxC" target="blank">
+            <div class="card h-noticia h-bg-reportaje">
+              <div class="text-center h-text-bold-gr text-white mt-3 mb-3">
+                Reportaje a Marcelo Roffe en México
+              </div>
+              <div class="text-center h-text-bold text-white mb-3">
+                Click aquí para ver los videos
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Radio Continental -->
+
+        <div class="col-md-12 mt-4">
+          <a href="http://www.continental.com.ar/noticias/deportes/m-roffe-los-argentinos-somos-muy-exitistas-y-no-le-perdonamos-a-messi-que-no-sea-campeon-mundial/20180611/nota/3760452.aspx"
+            target="blank">
+            <div class="card h-noticia h-bg-continental">
+              <div class="text-center h-text-bold-gr text-white mt-3 mb-3">
+                Entrevista en Radio Continental con F. Bravo
+              </div>
+              <div class="text-center h-text-bold-main text-white mb-4 ml-2 mr-2">
+                Los argentinos somos muy exitistas y no le perdonamos a Messi que no sea campeón mundial
+              </div>
+              <div class="text-center h-text-bold text-white">
+                Click aquí para escuchar
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Infobae -->
+
+        <div class="col-md-12 mt-4">
+          <a href="https://www.infobae.com/deportes-2/2018/02/18/que-tipo-de-padre-sos-segun-el-comportamiento-que-tengas-con-tu-hijo-deportista-marcelo-roffe-psicologo-deportivo/"
+            target="blank">
+            <div class="card h-noticia h-bg-infobae">
+              <div class="text-center h-text-bold-gr text-white mt-3 mb-3">
+                Qué tipo de padre eres, según cómo trates a tu hijo deportista
+              </div>
+              <div class="text-center h-text-bold-main text-white mb-4 ml-2 mr-2">
+                Psicología Deportiva: Los distintos tipos de Padres
+              </div>
+              <div class="text-center h-text-bold text-white">
+                Click aquí para leer la nota completa
+              </div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Columna Derecha -->
+
+    <div class="col-md-3 mt-4">
+
+      <!-- Motivando con Textos -->
+
+      <div class="card">
+        <div class="card-header h-card-header h-card-header-primary">
+          <i class="fa fa-thumbs-o-up mr-3"></i>Motivando con Textos
+        </div>
+        <div class="card-body">
+          <a href="assets/{{texto.url}}" target="blank">
+            <i class="fa fa-external-link mr-3"></i>{{texto.titulo}}
+          </a>
+        </div>
+        <div class="card-footer h-text-bold">
+          <a routerLink="/motivacion">
+            <i class="fa fa-caret-right mr-3"></i>Ver todos los Textos
+          </a>
+        </div>
+      </div>
+
+      <!-- youtube arquero -->
+      <div class="card mt-4">
+        <div class="card-header h-card-header h-card-header-primary">
+          <i class="fa fa-youtube-play mr-3"></i>Video Destacado
+        </div>
+        <div class="card-body">
+          <iframe width="100%" src="https://www.youtube.com/embed/axtEWa3N9mI" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="card-footer">
+          El arquero puede atajar 9 pelotas, pero si falla en una es la cara de la derrota - Bitbol
+        </div>
+      </div>
+
+      <!-- Sitios Web Recomendados -->
+
+      <div class="card mt-4">
+        <div class="card-header h-card-header h-card-header-secondary">
+          <i class="fa fa-globe mr-3"></i>Sitios Web Recomendados
+        </div>
+        <div class="card-body p-0 pt-3">
+          <div class="form-row">
+            <div class="col-6">
+              <a href="http://www.psicodeportes.com" target="blank">
+                <img class="img-fluid" src="assets/img/banners/apda.jpg"
+                  alt="Asociación de Psicología del Deporte Argentina" title="APDA - Click aquí para visitar el sitio"
+                  style="display: block;">
+              </a>
+            </div>
+            <div class="col-6">
+              <a href="http://www.solcpad.com" target="blank">
+                <img class="img-fluid" src="assets/img/banners/solcpad.jpg"
+                  alt="Sociedad Latinoamericana y Caribeña de Psicología de la Actividad física y del Deporte"
+                  title="SOLCPAD - Click aquí para visitar el sitio" style="display: block;">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Facebook -->
+
+      <div class="card mt-4">
+        <div class="card-header h-card-header h-card-header-fb">
+          <i class="fa fa-facebook mr-3"></i>Facebook
+        </div>
+        <div class="card-body">
+          <div class="fb-page" data-href="https://www.facebook.com/marceroffe/" data-height="500" data-tabs="timeline"
+            data-small-header="true" data-adapt-container-width="true" data-hide-cover="false"
+            data-show-facepile="false">
+            <blockquote cite="https://www.facebook.com/marceroffe/" class="fb-xfbml-parse-ignore">
+              <a href="https://www.facebook.com/marceroffe/">Marcelo Roffe</a>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+
+      <!-- Libro - Psicologia del Jugador de Fútbol -->
+
+      <a href="assets/archivos/home/prologo_varsky.pdf" target="blank">
+        <div class="card mt-4">
+          <div class="card-header h-card-header h-card-header-secondary">
+            <i class="fa fa-pencil mr-3"></i>Psicología del Jugador de Fútbol
+          </div>
+          <div class="card-body p-3">
+            <img class="img-fluid" src="assets/img/banners/varsky.jpg"
+              alt="Psicología del Jugador de Fútbol - J. P. Varsky" title="Click aquí para leer el prólogo"
+              style="display: block; width: 100%;">
+          </div>
+        </div>
+      </a>
+
+      <!-- Video Destacado -->
+
+      <div class="card mt-4">
+        <div class="card-header h-card-header h-card-header-primary">
+          <i class="fa fa-youtube-play mr-3"></i>Video Destacado
+        </div>
+        <div class="card-body">
+          <iframe width="100%" src="https://www.youtube.com/embed/dCYAUIWUNgA" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="card-footer">
+          Entrevista con Marcelo Roffé - Simplemente Fútbol - ESPN - (Parte 1)
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Informacion Destacada -->
+
+  <div class="form-row">
+
+    <!-- Entrevista Gloria Balague -->
+
+    <div class="col-md-3 mt-4">
+      <div class="card h-100 p-3">
+        <div class="card-body p-0">
+          <a href="http://www.solcpad.com/assets/archivos/noticias/Entrevista_a_Gloria_Balague.pdf" target="blank">
+            <img class="img-fluid" src="assets/img/banners/gloria.jpg" alt="Gloria Balague"
+              style="display: block; width: 100%;">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bajo Perfil -->
+
+    <div class="col-md-6 mt-4">
+      <div class="card h-100 p-3">
+        <div class="card-body h-bg-perfil p-2">
+          <div class="text-center h-perfil-header text-white mt-2">
+            "El perfil bajo es una condición muy importante para la eficacia de nuestro trabajo"
+          </div>
+          <div class="text-center h-perfil-sub-header text-white mt-1">
+            Estos deportistas de elite dan testimonio del trabajo realizado:
+          </div>
+          <div class="text-center h-perfil-link text-white mt-2 p-2">
+            <a href="assets/archivos/bajo-perfil/rogelio-funes-mori.pdf" target="blank">Rogelio Funes Mori</a>
+            &#160;-&#160;
+            <a href="https://www.tycsports.com/liga-profesional-de-futbol/jose-luis-gomez-palpita-su-retorno-estoy-ansioso-por-entrenar-con-mis-companeros-20200803.html"
+              target="blank">José Luis Gomez</a> &#160;-&#160;
+            <a href="https://youtu.be/UfiVk1zflN0" target="blank">Leticia Boscacci</a> &#160;-&#160;
+            <a href="assets/archivos/bajo-perfil/diego_herner.pdf" target="blank">Diego Herner</a> &#160;-&#160;
+            <a href="assets/archivos/bajo-perfil/barrientos.pdf" target="blank">Pitu Barrientos</a> &#160;-&#160;
+            <a href="assets/archivos/bajo-perfil/abbondancieri.pdf" target="blank">Pato Abbondanzieri</a> &#160;-&#160;
+            <a href="assets/archivos/bajo-perfil/mascherano.pdf" target="blank">Javier Mascherano</a> &#160;-&#160;
+            <a href="assets/archivos/bajo-perfil/gomez.pdf" target="blank">Papu Gomez</a> &#160;-&#160;
+            <a href="assets/archivos/bajo-perfil/dominguez.pdf" target="blank">Chori Dominguez</a> &#160;-&#160;
+            <a href="assets/archivos/bajo-perfil/gonzalez.pdf" target="blank">Mariano González</a> &#160;-&#160;
+            <a href="assets/archivos/bajo-perfil/colotto.pdf" target="blank">Diego Colotto</a> &#160;-&#160;
+            <a href="assets/archivos/bajo-perfil/saviola.pdf" target="blank">Javier Saviola</a> &#160;-&#160;
+            <a href="assets/archivos/bajo-perfil/dalessandro.pdf" target="blank">Andres D'Alessandro</a> &#160;-&#160;
+            <a href="assets/archivos/bajo-perfil/vargas.pdf" target="blank">Fabián Vargas</a> &#160;-&#160;
+            <a href="assets/archivos/bajo-perfil/rodriguez.jpg" target="blank">Maxi Rodriguez</a> &#160;-&#160;
+            <a href="assets/archivos/bajo-perfil/calleri.pdf" target="blank">Jonathan Calleri</a> &#160;-&#160;
+            <a href="assets/archivos/bajo-perfil/pichot.pdf" target="blank">Alan Pichot (Gran Maestro de Ajedrez)</a>
+            &#160;-&#160;
+            <a href="assets/archivos/bajo-perfil/gutierrez.pdf" target="blank">Jon&aacute;s Gutierrez</a> &#160;-&#160;
+            <a href="assets/archivos/bajo-perfil/buonanotte.jpg" target="blank">Diego Buonanotte</a> &#160;-&#160;
+            <a href="assets/archivos/bajo-perfil/teo_gutierrez.pdf" target="blank">Teo Gutierrez</a> &#160;-&#160;
+            <a href="assets/archivos/bajo-perfil/battaglia.pdf" target="blank">Rodrigo Battaglia</a> &#160;-&#160;
+            <a href="assets/archivos/bajo-perfil/russo.pdf" target="blank">Fernanda Russo</a> &#160;-&#160;
+            <a href="assets/archivos/bajo-perfil/oliva.pdf" target="blank">Maximiliano Oliva</a> &#160;-&#160;
+            <a href="assets/archivos/bajo-perfil/james_rodriguez.pdf" target="blank">James Rodriguez</a>
+          </div>
+          <div class="text-center h-perfil-sub-header text-white mt-1">
+            Y tambien los siguientes entrenadores:
+          </div>
+          <div class="text-center h-perfil-link text-white mt-1 p-2">
+            <a href="assets/archivos/bajo-perfil/zubeldia.pdf" target="blank">Luis Zubeldia</a> &#160;-&#160;
+            <a href="assets/archivos/bajo-perfil/schurrer.pdf" target="blank">Gabriel Schurrer</a> &#160;-&#160;
+            <a href="assets/archivos/bajo-perfil/unai_emery.pdf" target="blank">Unai Emery</a> &#160;-&#160;
+            <a href="assets/archivos/bajo-perfil/sava.pdf" target="blank">Facundo Sava</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Formando al Lider de un Equipo -->
+
+    <div class="col-md-3 mt-4">
+      <div class="card h-100 p-3">
+        <div class="card-body p-0">
+          <img class="img-fluid" src="assets/img/banners/deportea.jpg" alt="Deportea"
+            style="display: block; width: 100%;">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

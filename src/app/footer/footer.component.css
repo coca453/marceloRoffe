@@ -1,0 +1,26 @@
+.footer {
+    bottom: 0;
+    position: absolute;
+    background-color: #DDDDDD;
+    background: radial-gradient(at top left, #E0E0E0, #FFFFFF);
+    border-top: 1px solid #E0E0E0;
+    height: 50px;
+}
+
+.footer-content {
+    font-size: 14px;
+    line-height: 50px;
+}
+
+.credits {
+    font-size: 12px;
+    line-height: 50px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 639px) {
+
+    .credits {
+        display: none;
+    }
+
+}

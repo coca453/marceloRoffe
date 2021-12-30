@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <div class="row section">
+    <div class="col-12 section-title"><i class="fa fa-thumbs-o-up mr-3"></i>Motivando con Textos</div>
+  </div>
+  <div class="card mt-4">
+    <div class="card-body p-4">
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-light" *ngFor="let motivacion of motivaciones">
+          <i class="fa fa-external-link mr-3"></i>
+          <a href="assets/{{motivacion.url}}" target="blank" class="m-motivacion">
+            <span [innerHtml]=motivacion.titulo></span>
+          </a>
+        </li>
+      </ul>
+      <div class="mt-4">
+        <pagination [totalItems]="total" [itemsPerPage]="maxResults" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)" previousText="Anterior" nextText="Siguiente"></pagination>
+      </div>
+    </div>
+  </div>
+</div>

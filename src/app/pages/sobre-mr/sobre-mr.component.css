@@ -1,0 +1,22 @@
+.s-title {
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+}
+
+.s-description {
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+.s-link {
+    font-size: 14px;
+}
+
+.card-body {
+    min-height: 70px;    
+}
+
+.card-text {
+    font-size: 12px;
+}

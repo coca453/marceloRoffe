@@ -1,0 +1,204 @@
+.h-card-header {
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    font-weight: bold;
+}
+
+.h-card-header-primary {
+    background-color: #CF392B;
+    background: radial-gradient(at top left, #CF392B, #B43025);
+    color: #FFFFFF;
+}
+
+.h-card-header-secondary {
+    background-color: #CF392B;
+    background: radial-gradient(at bottom left, #555555, #777777);
+    color: #FFFFFF;
+}
+
+.h-card-header-fb {
+    background-color: #3B5998;
+    background: radial-gradient(at bottom left, #3B5998	, #314A80);
+    color: #FFFFFF;
+}
+
+.h-card-header-tw {
+    background-color: #00ACED;
+    background: radial-gradient(at bottom left, #0084B4, #00ACED);
+    color: #FFFFFF;
+}
+
+.h-card-header-fv {
+    background-color: #327D56;
+    background: radial-gradient(at bottom left, #327D56, #233E2B);
+    color: #FFFFFF;
+}
+
+.h-noticia {
+    padding: 0 10px;
+    min-height: 127px;
+}
+
+.h-card-footer {    
+    border-top: none;    
+    background-color: #FFFFFF;
+}
+
+.text-logo {
+    font-size: 14px;
+    letter-spacing: 0.4px;
+    font-weight: bold;
+}
+
+.text-consultora {
+    color: #CF392B;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    font-weight: bold;
+}
+
+.logo {
+    height: 70px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 639px) {
+
+    .logo {
+        margin-top: 20px;
+    }
+}
+
+.h-text-intro {
+    font-size: 13px;
+    letter-spacing: 0.1px;
+    text-align: justify;
+}
+
+.h-text-violencia {
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    text-align: center;
+}
+
+.h-text-cuarentena {
+    color: #FFFFFF;
+    font-size: 16px!important;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    text-align: center;
+}
+
+.h-text-ar {
+    font-size: 13px;
+}
+
+.h-text-bold {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.1px;
+}
+
+.h-text-bold-main {
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.2px;
+}
+
+.h-text-bold-gr {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.2px;
+}
+
+.h-perfil-header {
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.2px;
+}
+
+.h-perfil-sub-header {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.2px;
+}
+
+.h-perfil-link a {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.2px;
+    color: #D95348;
+}
+
+.h-bg-futbol-violencia {
+    background: url('http://marceloroffe.com/assets/img/banners/futbol_violencia.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.h-bg-libros-cuarentena {
+    background: url('http://marceloroffe.com/assets/img/banners/libros-cuarentena.jpg') center no-repeat;
+    background-size: cover;
+    padding: 40px!important;
+}
+
+.h-bg-seminario {
+    background: url('http://marceloroffe.com/assets/img/banners/seminario_cordoba.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.h-bg-infobae {
+    background: url('http://marceloroffe.com/assets/img/banners/infobae.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.h-bg-perfil {
+    background: url('http://marceloroffe.com/assets/img/banners/bajo_perfil.jpg') no-repeat;
+    background-size: cover;
+}
+
+.h-bg-borinsky {
+    background: url('http://marceloroffe.com/assets/img/banners/borinsky.jpg') no-repeat;
+    background-size: cover;
+}
+
+.h-bg-continental {
+    background: url('http://marceloroffe.com/assets/img/banners/continental.jpg') no-repeat;
+    background-size: cover;
+}
+
+.h-bg-liderazgo-para-equipos {
+    background: url('http://marceloroffe.com/assets/img/banners/liderazgo_para_equipos.jpg') no-repeat;
+    background-size: cover;
+}
+
+.h-bg-e-books {
+    background: url('http://marceloroffe.com/assets/img/banners/e-books.jpg') no-repeat;
+    background-size: cover;
+}
+
+.h-bg-reportaje {
+    background: url('http://marceloroffe.com/assets/img/banners/reportaje.jpg') no-repeat;
+    background-size: cover;
+}
+
+.h-bg-gago {
+    background: url('http://marceloroffe.com/assets/img/banners/gago.jpg') no-repeat;
+    background-size: cover;
+}
+
+.h-bg-lanus {
+    background: url('http://marceloroffe.com/assets/img/banners/lanus.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.youtube{
+    width: 100%;
+    height: 100%;
+}

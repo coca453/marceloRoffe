@@ -1,0 +1,16 @@
+<div class="container-fluid">
+  <div class="row section">
+    <div class="col-12 section-title"><i class="fa fa-newspaper-o mr-3"></i>MR en los Medios</div>
+  </div>
+  <ul class="list-group mt-4">
+    <li class="list-group-item list-group-item-light" *ngFor="let medio of medios">
+      <i class="fa fa-external-link mr-3"></i>
+      <a href="{{medio.url}}" target="blank" class="m-medio">
+        <span [innerHtml]=medio.medio></span>
+      </a>
+    </li>
+  </ul>
+  <div class="mt-4">
+    <pagination [totalItems]="total" [maxSize]="5" [itemsPerPage]="maxResults" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)" previousText="Anterior" nextText="Siguiente"></pagination>
+  </div>
+</div>
